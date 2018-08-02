@@ -1,114 +1,97 @@
-<!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Doki Doki Mod Manager!</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doki Doki Mod Manager</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<div class="container">
+    <div class="header">
+        <img src="images/logo.png" width="200" alt="Doki Doki Mod Manager Logo">
+        <h1>Doki Doki Mod Manager</h1>
+        <p>Organise, download and play mods for Doki Doki Literature Club!</p>
+    </div>
+    <div class="content">
+        <h2>Downloads</h2>
+        <p>Doki Doki Mod Manager is free to download and always will be.</p>
+        <p><strong style="color: firebrick;">It has come to my attention that some antivirus software may be blocking
+            DDMM from accessing files, leading to errors or crashes. Please add DDMM as a trusted application to avoid
+            this happening, or disable your antivirus software.</strong></p>
+        <button id="open-download" class="button">Download Now</button>
+        <hr>
+        <h2>About</h2>
+        <p>
+            Since it was released, hundreds of mods for <a href="https://ddlc.moe" target="_blank">Doki Doki Literature
+            Club</a> have been released, adding
+            hours of extra gameplay. Doki Doki Mod Manager simplifies the process of installing and managing multiple
+            copies of the game.
+        </p>
+        <p>
+            Since release, Doki Doki Mod Manager has been downloaded <span id="download-count">many</span> times, and
+            adopted by the developers of several popular mods, including
+            <a href="https://monikaafterstory.com" target="_blank">Monika After Story</a>.
+        </p>
+        <p>Doki Doki Mod Manager has a rich set of features designed to make your modding experience as easy as
+            possible.</p>
+        <ul>
+            <li>Automatically install most mods - if you find one that doesn't work, let me know!</li>
+            <li>A built-in mod browser</li>
+            <li>Separate save files per-mod - no need to worry about overwriting your save data.</li>
+            <li>Discord integration</li>
+            <li><em>More coming soon...</em></li>
+        </ul>
+        <hr>
+        <h2>Screenshots</h2>
+        <div class="screenshots">
+            <img src="images/screenshot1.png" class="screenshot">
+            <img src="images/screenshot2.png" class="screenshot">
+            <img src="images/screenshot3.png" class="screenshot">
+            <img src="images/screenshot4.png" class="screenshot">
+        </div>
+        <hr>
+        <h2>Contact</h2>
+        <p>Got any questions, suggestions, complaints or compliments? I'd love to hear what you have to say!</p>
+        <ul>
+            <li><a href="https://www.reddit.com/user/zuudo/comments/93o9ze/" target="_blank">Reddit Discussion
+                Thread</a></li>
+            <li><a href="https://discord.me/modmanager" target="_blank">Discord Server (for general support)</a></li>
+            <li><a href="https://github.com/DokiDokiModManager/Mod-Manager" target="_blank">GitHub (for bug reports)</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.png" alt="" width="200" /></span>
-						<h1>Doki Doki Mod Manager!</h1>
-						<p>Install, manage and share mods for <a href="https://ddlc.moe" target="_blank">DDLC</a> with ease.</p>
-					</header>
+<div class="modal" id="download-modal">
+    <div class="modal-background"></div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <h2>Downloads</h2>
+            <p>Downloads are available for Windows and Linux.</p>
+            <p>The latest version is <strong id="latest-version"></strong>.</p>
+            <br>
+            <p class="text-center"><strong>Want to support development of DDMM? Click <a
+                    href="https://streamlabs.com/zudo" target="_blank">here</a> to
+                make a small contribution. Donations of any size are welcomed, but never
+                required.</strong></p>
+            <br>
+            <div class="text-center">
+                <a class="button huge" id="download-windows">Windows</a>
+                <a class="button huge" id="download-linux">Linux</a>
+                <a class="button huge" href="https://github.com/DokiDokiModManager/Mod-Manager/releases"
+                   id="download-other"
+                   target="_blank">Other Downloads</a>
+            </div>
+            <hr>
+            <button class="button" id="close-download">Close</button>
+        </div>
+    </div>
+</div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#cta" class="active">Download</a></li>
-							<li><a href="#about">About</a></li>
-							<!--<li><a href="#store">Mod Store</a></li>-->
-						</ul>
-					</nav>
+<script src="js/app.js"></script>
 
-				<!-- Main -->
-					<div id="main">
-
-							<section id="cta" class="main special">
-									<header class="major">
-										<h2>Download</h2>
-										<p>Grab the latest version of Doki Doki Mod Manager.</p>
-									</header>
-									<p>Available for Windows and Linux (AppImage)</p>
-									<footer class="major">
-										<ul class="actions">
-											<li><a href="https://us-central1-doki-doki-mod-manager.cloudfunctions.net/getLatestVersion?platform=win" class="button special" target="_blank">Windows</a></li>
-											<li><a href="https://us-central1-doki-doki-mod-manager.cloudfunctions.net/getLatestVersion?platform=linux" class="button special" target="_blank">Linux</a></li>
-										</ul>
-									</footer>
-								</section>
-
-						<!-- Introduction -->
-							<section id="about" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>About</h2>
-										</header>
-										<p>Doki Doki Mod Manager was born after I saw the way mods were being distributed in the DDLC community. Just <code>.zip</code> files, with no properly defined structure. DDMM aims to fix this by:</p>
-										<ul>
-											<li>Creating a universal structure for DDLC mods.</li>
-											<li>Keeping mod installs separate, so you don't have to delete save files from your old games.</li>
-										</ul>
-									</div>
-								</div>
-							</section>
-
-							<!-- Introduction -->
-							<!--<section id="store" class="main">
-									<div class="spotlight">
-										<div class="content">
-											<header class="major">
-												<h2>Mod Store</h2>
-											</header>
-											<p>Doki Doki Mod Manager has its own mod store, built directly into the app. Upload your mods for free and anyone can find and install it with the click of a button.</p>
-											<footer class="major">
-												<ul class="actions">
-													<li><a href="https://repo.doki.space" class="button special" target="_blank">Upload Mods</a></li>
-												</ul>
-											</footer>
-										</div>
-									</div>
-								</div>
-							</section>-->
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Discord</h2>
-							<p>Discuss mods and more on our Discord server!</p>
-							<a class="button" href="https://discord.gg/fVdkvAC">Join</a>
-						</section>
-						<p class="copyright">&copy; Zudo 2018. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
