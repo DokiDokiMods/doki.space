@@ -13,7 +13,7 @@ function getRepoData() {
             }, 0);
 
             // get latest version
-            const latest = releases[0];
+            const latest = releases.filter(d => !d.tag_name.endsWith("-beta"))[0];
 
             // get version number
             const version = latest.name;
