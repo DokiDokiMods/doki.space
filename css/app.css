@@ -56,6 +56,14 @@ a:hover {
   color: #ccc;
 }
 
+.fab {
+  font-weight: normal;
+}
+
+.fas {
+  font-weight: bold;
+}
+
 .container.title {
   text-align: center;
 }
@@ -103,7 +111,7 @@ a.button:hover {
 footer.omnipresent {
   position: fixed;
   bottom: 1em;
-  left: 1em;
+  right: 1em;
   width: 400px;
   font-size: 0.9em;
   background-color: rgba(0, 0, 0, 0.5);
