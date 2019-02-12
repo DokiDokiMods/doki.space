@@ -4,113 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Doki Doki Mod Manager</title>
-    <meta name="description" content="Doki Doki Mod Manager - the most powerful mod manager for Doki Doki Literature Club.">
-    <meta name="keywords" content="ddlc,doki doki,literature,club,natsuki,monika,yuri,sayori,just monika,mods,modding,mod installer,mod manager,mod player,mod launcher">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <meta name="description"
+          content="Doki Doki Mod Manager - the most powerful mod manager for Doki Doki Literature Club.">
+    <meta name="keywords"
+          content="ddlc,doki doki,literature,club,natsuki,monika,yuri,sayori,just monika,mods,modding,mod installer,mod manager,mod player,mod launcher">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-7466765351702358",
-              enable_page_level_ads: true
-         });
-    </script>
 </head>
 <body>
 
+<div class="container title">
+    <img src="images/logo.png" width="200" alt="Doki Doki Mod Manager Logo">
+
+    <h1>Doki Doki Mod Manager</h1>
+    <h2>The most powerful mod manager for Doki Doki Literature Club.</h2>
+
+    <br>
+
+    <div class="downloads">
+        <a class="button windows" id="download-windows"><i class="fab fa-windows fa-fw"></i> <span class="collapse">Download for Windows</span></a>
+        <a class="button mac" id="download-mac"><i class="fab fa-apple fa-fw"></i> <span class="collapse">Download for macOS</span></a>
+        <a class="button linux" id="download-linux"><i class="fab fa-linux fa-fw"></i> <span class="collapse">Download for Linux</span></a>
+    </div>
+
+    <!--<br>-->
+
+    <!--<p>Also available on the <a href="https://www.microsoft.com/store/apps/9P4JKHR06FTW" target="_blank">Microsoft-->
+    <!--Store</a>.</p>-->
+
+    <br>
+
+    <p>The latest version is <strong id="latest-version">loading</strong>.</p>
+</div>
+
 <div class="container">
-    <div class="header">
-        <img src="images/logo.png" width="200" alt="Doki Doki Mod Manager Logo">
-        <h1>Doki Doki Mod Manager</h1>
-        <p>Organise, download and play mods for Doki Doki Literature Club!</p>
+    <h2>What is Doki Doki Mod Manager?</h2>
+
+    <p>Doki Doki Mod Manager is a tool that simplifies the installation of mods for <a href="https://ddlc.moe"
+                                                                                       target="_blank">Doki Doki
+        Literature Club</a>.
+        Furthermore, it seamlessly manages multiple installations of the game, meaning you don't need to worry about
+        losing your save files.</p>
+
+    <br>
+
+    <p>Doki Doki Mod Manager has a rich set of features that wil make your modding experience more fun. What's more, mod
+        creators can use the SDK to add special features to their mods, such as achievements.</p>
+
+    <br><br>
+
+    <h2>Contact</h2>
+
+    <p>Got any questions, suggestions, complaints or compliments? I'd love to hear what you have to say!</p>
+
+    <ul>
+        <li><a href="/discord" target="_blank"><i class="fab fa-discord fa-fw"></i> Doki Doki Mod Manager Discord server</a></li>
+        <li><a href="mailto:zudo@doki.space" target="_blank"><i class="fas fa-envelope fa-fw"></i> Email me (zudo@doki.space)</a></li>
+    </ul>
+
+    <p>Want to help out?</p>
+
+    <ul>
+        <li><a href="https://github.com/DokiDokiModManager/Mod-Manager" target="_blank"><i class="fab fa-github fa-fw"></i> Contribute code on GitHub</a></li>
+        <li><a href="https://github.com/DokiDokiModManager/Mod-Manager/tree/master/lang" target="_blank"><i class="fas fa-globe fa-fw"></i> Contribute translations (requires a GitHub account)</a></li>
+    </ul>
+
+    <br>
+</div>
+
+<div class="container title">
+    <h2>Screenshots</h2>
+
+    <br>
+
+    <div>
+        <img src="images/ss1.png" alt="Doki Doki Mod Manager's user interface">
+        <p>Doki Doki Mod Manager's user interface</p>
     </div>
-    <div class="content">
-        <h2>Downloads</h2>
-        <p>Doki Doki Mod Manager is free to download and always will be.</p>
-        <p><strong style="color: firebrick;">It has come to my attention that some antivirus software may be blocking
-            DDMM from accessing files, leading to errors or crashes. Please add DDMM as a trusted application to avoid
-            this happening, or disable your antivirus software.</strong></p>
-        <button id="open-download" class="button">Download Now</button>
-        <hr>
-        <h2>About</h2>
-        <p>
-            Since it was released, hundreds of mods for <a href="https://ddlc.moe" target="_blank">Doki Doki Literature
-            Club</a> have been released, adding
-            hours of extra gameplay. Doki Doki Mod Manager simplifies the process of installing and managing multiple
-            copies of the game.
-        </p>
-        <p>
-            Since release, Doki Doki Mod Manager has been downloaded <span id="download-count">many</span> times, and
-            adopted by the developers of several popular mods, including
-            <a href="https://monikaafterstory.com" target="_blank">Monika After Story</a>.
-        </p>
-        <p>Doki Doki Mod Manager has a rich set of features designed to make the modding experience as easy as
-            possible for both developers and players, with many more features on the horizon.</p>
-        <ul>
-            <li>Automatically install most mods - if you find one that doesn't work, let me know!</li>
-            <li>Separate save files per-mod - no need to worry about overwriting your save data.</li>
-            <li>Discord Rich Presence integration.</li>
-            <li>A modding SDK, with features such as achievements.</li>
-        </ul>
-        <hr>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- doki.space -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7466765351702358"
-             data-ad-slot="5478722815"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        <hr>
-        <h2>Screenshots</h2>
-        <div class="screenshots">
-            <img src="images/screenshot1.png" class="screenshot" alt="A screenshot of the app">
-            <img src="images/screenshot3.png" class="screenshot" alt="A screenshot showing configuration options">
-            <img src="images/screenshot4.png" class="screenshot" alt="A screenshot of the dark theme">
-        </div>
-        <hr>
-        <h2>Contact</h2>
-        <p>Got any questions, suggestions, complaints or compliments? I'd love to hear what you have to say!</p>
-        <ul>
-            <li><a href="https://www.reddit.com/user/zuudo/comments/93o9ze/" target="_blank">Reddit Discussion
-                Thread</a></li>
-            <li><a href="/discord/" target="_blank">Discord Server (for general support)</a></li>
-            <li><a href="https://github.com/DokiDokiModManager/Mod-Manager" target="_blank">GitHub (for bug reports)</a>
-            </li>
-        </ul>
-      
+
+    <br>
+
+    <div>
+        <img src="images/ss2.png" alt="Make Doki Doki Mod Manager your own with optional customisations.">
+        <p>Make Doki Doki Mod Manager your own with optional customisations.</p>
     </div>
 </div>
 
-<div class="modal" id="download-modal">
-    <div class="modal-background"></div>
-    <div class="modal-container">
-        <div class="modal-content">
-            <h2>Downloads</h2>
-            <p>Downloads are available for Windows and Linux.</p>
-            <p>The latest version is <strong id="latest-version"></strong>.</p>
-            <br>
-            <p class="text-center"><strong>Want to support development of DDMM? Click <a
-                    href="https://streamlabs.com/zudo" target="_blank">here</a> to
-                make a small contribution. Donations of any size are welcomed, but never
-                required.</strong></p>
-            <br>
-            <div class="text-center">
-                <a class="button huge" id="download-windows">Windows</a>
-                <a class="button huge" id="download-linux">Linux</a>
-                <a class="button huge" href="https://github.com/DokiDokiModManager/Mod-Manager/releases"
-                   id="download-other"
-                   target="_blank">Other Downloads</a>
-            </div>
-            <hr>
-            <button class="button" id="close-download">Close</button>
-        </div>
-    </div>
-</div>
+<footer class="omnipresent">
+    <h3>Disclaimer</h3>
+    Doki Doki Mod Manager is unaffiliated with Team Salvato, and may contain spoilers. Licensed under the <a
+        href="https://raw.githubusercontent.com/DokiDokiModManager/Mod-Manager/master/LICENSE.txt" target="_blank">MIT
+    License</a>.
+
+    <br><br>
+
+    <a href="privacy.html">View the Privacy Policy</a>
+</footer>
+
 <script src="js/app.js"></script>
-
 </body>
 </html>
