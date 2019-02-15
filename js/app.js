@@ -20,8 +20,8 @@ function getRepoData() {
 
             const downloads = {
                 "windows": latest.assets.find(dl => dl.name.match(/\.exe$/)).browser_download_url,
-                "linux_32": latest.assets.find(dl => dl.name.match(/i386\.AppImage$/)).browser_download_url,
-                "linux_64": latest.assets.find(dl => dl.name.match(/x86_64\.AppImage$/)).browser_download_url
+                "linux": latest.assets.find(dl => dl.name.match(/x86_64\.AppImage$/)).browser_download_url,
+                "mac": latest.assets.find(dl => dl.name.match(/\.dmg$/)).browser_download_url,
             };
 
             ff({
@@ -36,17 +36,18 @@ function getRepoData() {
 }
 
 getRepoData().then(data => {
-    console.log(data);
     document.querySelector("#latest-version").innerText = data.version;
-    document.querySelector("#download-count").innerText = data.download_count;
-    document.querySelector("#download-windows").setAttribute("href",data.downloads.windows);
-    document.querySelector("#download-linux").setAttribute("href",data.downloads.linux_64);
+    // document.querySelector("#download-count").innerText = data.download_count;
+    document.querySelector("#download-windows").setAttribute("href", data.downloads.windows);
+    document.querySelector("#download-linux").setAttribute("href", data.downloads.linux);
+    document.querySelector("#download-mac").setAttribute("href", data.downloads.mac);
 });
 
-document.querySelector("#open-download").addEventListener("click", () => {
-   document.querySelector("#download-modal").classList.add("active");
-});
 
-document.querySelector("#close-download").addEventListener("click", () => {
-    document.querySelector("#download-modal").classList.remove("active");
-});
+if (navigator.appVersion.indexOf("Win") !== -1) {
+    document.querySelector(".downloads").classList.add("windows");
+} else if (navigator.appVersion.indexOf("Mac") !== -1) {
+    document.querySelector(".downloads").classList.add("mac");
+} else if (navigator.appVersion.indexOf("Linux") !== -1) {
+    document.querySelector(".downloads").classList.add("linux");
+}
