@@ -28,6 +28,7 @@ body {
     padding: 1em;
   }
 }
+
 p, h1, h2, h3 {
   padding: 0;
   margin: 0;
@@ -108,6 +109,7 @@ a.button:hover {
     display: none;
   }
 }
+
 footer.omnipresent {
   position: fixed;
   bottom: 1em;
@@ -130,4 +132,12 @@ footer.omnipresent:hover {
   opacity: 1;
 }
 
-/*# sourceMappingURL=app.css.map */
+@media screen and (max-width: 768px) {
+  footer.omnipresent {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
