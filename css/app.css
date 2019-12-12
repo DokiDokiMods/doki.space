@@ -88,6 +88,10 @@ a.button:hover {
   background-color: #eee;
 }
 
+.direct {
+  font-size: 0.75em;
+}
+
 .downloads .button {
   font-size: 1.25em;
 }
