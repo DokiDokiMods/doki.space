@@ -42,13 +42,13 @@ getRepoData().then(data => {
 
     // document.querySelector("#download-count").innerText = data.download_count;
 
-    document.querySelector("#download-windows").setAttribute("href", SUPPORT_URL + encodeURIComponent(data.downloads.windows));
-    document.querySelector("#download-linux").setAttribute("href", SUPPORT_URL + encodeURIComponent(data.downloads.linux));
-    document.querySelector("#download-mac").setAttribute("href", SUPPORT_URL + encodeURIComponent(data.downloads.mac));
+    //document.querySelector("#download-windows").setAttribute("href", SUPPORT_URL + encodeURIComponent(data.downloads.windows));
+    //document.querySelector("#download-linux").setAttribute("href", SUPPORT_URL + encodeURIComponent(data.downloads.linux));
+    //document.querySelector("#download-mac").setAttribute("href", SUPPORT_URL + encodeURIComponent(data.downloads.mac));
 
-    document.querySelector("#direct-windows").setAttribute("href", data.downloads.windows);
-    document.querySelector("#direct-linux").setAttribute("href", data.downloads.linux);
-    document.querySelector("#direct-mac").setAttribute("href", data.downloads.mac);
+    document.querySelector("#download-windows").setAttribute("href", data.downloads.windows);
+    document.querySelector("#download-linux").setAttribute("href", data.downloads.linux);
+    document.querySelector("#download-mac").setAttribute("href", data.downloads.mac);
 });
 
 
