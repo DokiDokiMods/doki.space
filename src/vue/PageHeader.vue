@@ -4,7 +4,7 @@
         <h1><strong>Doki Doki Mod Manager</strong> 4</h1>
         <p>A beautiful mod manager and installer for Doki Doki Literature Club.</p>
         <br>
-        <p><a class="button transparent" href="#downloads"><i class="fas fa-download fa-fw"></i> Download</a></p>
+        <p><a class="button transparent" href="#before-downloads"><i class="fas fa-download fa-fw"></i> Download</a></p>
     </div>
 </template>
 

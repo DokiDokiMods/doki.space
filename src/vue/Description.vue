@@ -1,9 +1,9 @@
 <template>
     <div>
-        <p class="lead">Seamlessly manage your Doki Doki Literature Club mods in one app.</p>
+        <p class="lead">Seamlessly download, install and organise your Doki Doki Literature Club mods. All in one app.</p>
 
         <p>Doki Doki Mod Manager brings all parts of DDLC modding together into one beautiful, simple experience.
-            Downloading, installing and organising your mods is all handled automatically, so you can start playing
+            All of the tricky parts of modding are handled automatically, so you can start playing
             quicker than ever before.</p>
 
         <p>With Doki Doki Mod Manager, every mod has its own save folder. This means you can be playing several mods at

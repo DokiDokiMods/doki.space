@@ -17,7 +17,13 @@
             </div>
         </div>
 
-        <div class="container" id="downloads">
+        <div class="container mid" id="before-downloads">
+            <div class="content">
+                <PatreonBanner></PatreonBanner>
+            </div>
+        </div>
+
+        <div class="container">
             <div class="content">
                 <Downloads :os="os"></Downloads>
             </div>
@@ -45,10 +51,11 @@
     import Footer from "./Footer";
     import Screenshots from "./Screenshots";
     import Description from "./Description";
+    import PatreonBanner from "./PatreonBanner";
 
     export default {
         name: "App",
-        components: {Description, Footer, Screenshots, PageHeader, Downloads},
+        components: {PatreonBanner, Description, Footer, Screenshots, PageHeader, Downloads},
         data() {
             return {
                 screenshots: [s1, s2, s3, s4, s5],
