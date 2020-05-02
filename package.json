@@ -1,0 +1,21 @@
+{
+  "name": "doki.space",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "platform-detect": "^3.0.0",
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.1.2",
+    "parcel": "^1.12.4",
+    "sass": "^1.26.5",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
