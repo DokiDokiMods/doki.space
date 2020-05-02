@@ -1,12 +1,40 @@
 <template>
     <div class="footer">
         <div class="footer-item">
-            <h2>Contact</h2>
+            <h2>Contribute</h2>
+
+            <p>If you have any skills that may help improve Doki Doki Mod Manager, please let me know! I'm currently
+                looking for volunteer <strong>translators</strong>, but if you have something else you could bring to
+                the table, I'm happy to chat about it.</p>
+
+            <p>I try my best to respond as quickly as possible to any messages I receive, but please be aware that this
+                may not always be possible.</p>
 
             <div class="social-links">
-                <a href="/discord" target="_blank" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
-                <a href="https://github.com/DokiDokiModManager/Mod-Manager/issues/new" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:zudo@doki.space" target="_blank" class="social-link" title="email"><i class="fas fa-envelope"></i></a>
+                <a href="/discord"
+                   target="_blank"
+                   class="social-link"
+                   title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://github.com/DokiDokiModManager/Mod-Manager/issues/new"
+                   target="_blank"
+                   class="social-link"
+                   title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:zudo@doki.space"
+                   target="_blank"
+                   class="social-link"
+                   title="Email zudo@doki.space"><i class="fas fa-envelope"></i></a>
+                <a href="https://hosted.weblate.org/engage/doki-doki-mod-manager/"
+                   target="_blank"
+                   class="social-link"
+                   title="Translation project on Weblate"><i class="fas fa-language"></i></a>
+            </div>
+
+            <div style="text-align: center">
+                <a href="https://hosted.weblate.org/engage/doki-doki-mod-manager/?utm_source=widget"
+                   target="_blank">
+                    <img src="https://hosted.weblate.org/widgets/doki-doki-mod-manager/-/287x66-grey.png"
+                         alt="Translation status">
+                </a>
             </div>
         </div>
 
@@ -50,5 +78,6 @@
     .footer-item {
         flex-basis: 0;
         flex-grow: 1;
+        padding: 0.5em;
     }
 </style>

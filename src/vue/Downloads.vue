@@ -8,13 +8,30 @@
 
         <div class="tab-content">
             <div class="tab" v-if="tab === 'windows'">
-                <h2>Downloads for Windows</h2>
+                <h3>Downloads for Windows</h3>
+
+                <p>Download and run the installer. If you are prompted by Windows Defender, choose <strong>More
+                    info</strong> then <strong>Run anyway</strong>.</p>
+
+                <a class="button primary">
+                    <i class="fas fa-download fa-fw"></i> Download
+                </a>
             </div>
             <div class="tab" v-else-if="tab === 'mac'">
-                <h2>Downloads for macOS</h2>
+                <h3>Downloads for macOS</h3>
+
+                <p>Download Doki Doki Mod Manager and open it, then drag the icon to your Applications folder.</p>
+
+                <p>If macOS blocks you from opening the application, open <strong>System Preferences</strong>, then go
+                    to <strong>Security and Privacy</strong> then <strong>General</strong>. Click <strong>Open
+                        Anyway</strong> to start Doki Doki Mod Manager.</p>
+
+                <a class="button primary">
+                    <i class="fas fa-download fa-fw"></i> Download
+                </a>
             </div>
             <div class="tab" v-else>
-                <h2>Downloads for Linux</h2>
+                <h3>Downloads for Linux</h3>
 
                 <p>If your distribution supports it, Doki Doki Mod Manager is available as a Snap.</p>
 
@@ -49,7 +66,14 @@
                 tab: this.os,
                 downloads: {
                     linux: {
-                        url_64: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-linux-x86_64.AppImage"
+                        url_64: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-linux-x86_64.AppImage",
+                        url_32: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-linux-i386.AppImage"
+                    },
+                    mac: {
+                        url: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-mac.dmg"
+                    },
+                    windows: {
+                        url: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-win.exe"
                     }
                 },
                 tabs: [

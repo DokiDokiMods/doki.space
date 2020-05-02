@@ -44,7 +44,12 @@
         /** idk **/
     }
 
+    .current img {
+        max-width: 100%;
+    }
+
     .list-item img {
         width: 100%;
+        cursor: pointer;
     }
 </style>

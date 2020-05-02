@@ -20,6 +20,11 @@ h1, h2, h3, h4 {
   padding: 1em;
 }
 
+.container.mid {
+  background-color: #eee;
+  color: #111;
+}
+
 .container.footer {
   background-color: #333;
   color: #eee;
@@ -41,6 +46,10 @@ a {
   font-weight: normal;
   font-size: 1.75em;
   padding: 0.5em;
+}
+
+.social-links {
+  text-align: center;
 }
 
 .button {
@@ -84,11 +93,16 @@ a {
 
 .button.transparent:hover {
   background-color: #eee;
-  color: #111;
+  color: #333;
 }
 
 pre {
   background-color: #efefef;
   padding: 1em;
   border-radius: 3px;
+  overflow-x: auto;
+}
+
+.lead {
+  font-size: 1.25em;
 }
