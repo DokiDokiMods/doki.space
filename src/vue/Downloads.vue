@@ -38,7 +38,7 @@
                 <pre>$ snap install doki-doki-mod-manager</pre>
 
                 <a class="button primary" href="snap://doki-doki-mod-manager">
-                    <i class="fab fa-ubuntu fa-fw"></i> View in Ubuntu Software
+                    <i class="fas fa-shopping-bag fa-fw"></i> View in Snap Store
                 </a>
 
                 <p>It is also available as an AppImage.</p>
