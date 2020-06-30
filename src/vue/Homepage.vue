@@ -46,7 +46,7 @@
     import s5 from "../img/screenshots/s5.png";
     import platform from "platform-detect";
 
-    import PageHeader from "./HomepageHeader";
+    import PageHeader from "./PageHeader";
     import Downloads from "./Downloads";
     import Footer from "./Footer";
     import Screenshots from "./Screenshots";
