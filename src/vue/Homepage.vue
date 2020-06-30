@@ -46,7 +46,7 @@
     import s5 from "../img/screenshots/s5.png";
     import platform from "platform-detect";
 
-    import PageHeader from "./PageHeader";
+    import PageHeader from "./HomepageHeader";
     import Downloads from "./Downloads";
     import Footer from "./Footer";
     import Screenshots from "./Screenshots";
@@ -54,7 +54,7 @@
     import PatreonBanner from "./PatreonBanner";
 
     export default {
-        name: "App",
+        name: "Homepage",
         components: {PatreonBanner, Description, Footer, Screenshots, PageHeader, Downloads},
         data() {
             return {

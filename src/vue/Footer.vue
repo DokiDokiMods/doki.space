@@ -15,7 +15,7 @@
                    target="_blank"
                    class="social-link"
                    title="Discord"><i class="fab fa-discord"></i></a>
-                <a href="https://github.com/DokiDokiModManager/Mod-Manager/issues/new"
+                <a href="https://github.com/DokiDokiModManager/Mod-Manager"
                    target="_blank"
                    class="social-link"
                    title="GitHub"><i class="fab fa-github"></i></a>

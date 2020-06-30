@@ -7,13 +7,14 @@
         </div>
 
         <div class="tab-content">
+            <p v-if="error">The downloads couldn't be loaded for some reason. <a href="https://github.com/dokiDokiModManager/Mod-Manager/releases/tag/v3.2.8" target="_blank">Click here</a> to download manually.</p>
             <div class="tab" v-if="tab === 'windows'">
                 <h3>Downloads for Windows</h3>
 
                 <p>Download and run the installer. If you are prompted by Windows Defender, choose <strong>More
                     info</strong> then <strong>Run anyway</strong>.</p>
 
-                <a class="button primary">
+                <a class="button primary" :href="downloads.windows.url" :key="'64bit'">
                     <i class="fas fa-download fa-fw"></i> Download
                 </a>
             </div>
@@ -26,30 +27,32 @@
                     to <strong>Security and Privacy</strong> then <strong>General</strong>. Click <strong>Open
                         Anyway</strong> to start Doki Doki Mod Manager.</p>
 
-                <a class="button primary">
+                <a class="button primary" :href="downloads.mac.url" :key="'64bit'">
                     <i class="fas fa-download fa-fw"></i> Download
                 </a>
             </div>
             <div class="tab" v-else>
                 <h3>Downloads for Linux</h3>
 
-                <p>If your distribution supports it, Doki Doki Mod Manager is available as a Snap.</p>
+                <!--                <p>If your distribution supports it, Doki Doki Mod Manager is available as a Snap.</p>-->
 
-                <pre>$ snap install doki-doki-mod-manager</pre>
+                <!--                <pre>$ snap install doki-doki-mod-manager</pre>-->
 
-                <a class="button primary" href="snap://doki-doki-mod-manager">
-                    <i class="fas fa-shopping-bag fa-fw"></i> View in Snap Store
-                </a>
+                <!--                <a class="button primary" href="snap://doki-doki-mod-manager">-->
+                <!--                    <i class="fas fa-shopping-bag fa-fw"></i> View in Snap Store-->
+                <!--                </a>-->
 
-                <p>It is also available as an AppImage.</p>
+                <!--                <p>It is also available as an AppImage.</p>-->
+
+                <p>Doki Doki Mod Manager is available as an AppImage.</p>
 
                 <pre>{{linux_install_commands}}</pre>
 
-                <a class="button primary">
+                <a class="button primary" :href="downloads.linux.url_64" :key="'64bit'">
                     <i class="fas fa-download fa-fw"></i> Download (64-bit)
                 </a>
 
-                <a class="button secondary">
+                <a class="button secondary" :href="downloads.linux.url_32" :key="'32bit'">
                     <i class="fas fa-download fa-fw"></i> Download (32-bit)
                 </a>
             </div>
@@ -64,6 +67,7 @@
         data() {
             return {
                 tab: this.os,
+                error: false,
                 downloads: {
                     linux: {
                         url_64: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-linux-x86_64.AppImage",
@@ -103,6 +107,17 @@
                     `$ chmod +x ${fn}\n` +
                     `$ ./${fn}`;
             }
+        },
+        mounted() {
+            fetch("https://api.github.com/repos/DokiDokiModManager/Mod-Manager/releases/latest").then(res => res.json()).then(data => {
+                const files = data.assets;
+                this.downloads.linux.url_64 = files.find(file => file.name.match(/linux-x86_64\.AppImage$/)).browser_download_url;
+                this.downloads.linux.url_32 = files.find(file => file.name.match(/linux-i386\.AppImage$/)).browser_download_url;
+                this.downloads.windows.url = files.find(file => file.name.match(/win\.exe$/)).browser_download_url;
+                this.downloads.mac.url = files.find(file => file.name.match(/mac\.dmg$/)).browser_download_url;
+            }).catch(() => {
+                this.error = true;
+            });
         }
     }
 </script>
