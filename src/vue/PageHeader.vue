@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <img src="../img/logo.png" width="200" alt="Doki Doki Mod Manager Logo">
+    <div :class="{'short': short}">
+        <img src="../img/logo.png" :width="short ? 100 : 200" alt="Doki Doki Mod Manager Logo">
         <template v-if="!short">
             <h1><strong>Doki Doki Mod Manager</strong> 4</h1>
             <p>A beautiful mod manager and installer for Doki Doki Literature Club.</p>
@@ -27,5 +27,9 @@
         background-repeat: no-repeat;
         background-position: center;
         padding: 5em;
+    }
+
+    div.short {
+        padding: 1em;
     }
 </style>
