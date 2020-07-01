@@ -7,7 +7,7 @@
                 <div class="content">
                     <p class="lead">{{mod.modName}}</p>
                     <p>{{mod.modShortDescription}}</p>
-                    <p><a class="button primary" :href="launchURL"><i class="fas fa-download fa-fw"></i> Download with Doki Doki Mod
+                    <p v-if="directDownload"><a class="button primary" :href="launchURL"><i class="fas fa-download fa-fw"></i> Download with Doki Doki Mod
                         Manager</a></p>
                 </div>
             </div>
@@ -47,7 +47,7 @@
         components: {Description, Footer, PageHeader},
         data() {
             return {
-                downloadable: false,
+                directDownload: null,
                 mod: {},
                 loaded: false
             }
@@ -55,7 +55,7 @@
         computed: {
             launchURL() {
                 const data = {
-                    url: this.mod.modUploadURL,
+                    url: this.directDownload,
                     filename: this.mod.modName
                 };
                 return `ddmm://download-mod/${btoa(JSON.stringify(data))}`;
@@ -69,7 +69,7 @@
                 } else {
                     this.loaded = true;
                     this.mod = data.mod;
-                    this.downloadable = data.downloadable;
+                    this.directDownload = data.directDownload;
                 }
             }).catch(() => {
                 window.location.href = "/";
