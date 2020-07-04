@@ -1,0 +1,12 @@
+[build]
+    publish = "dist/"
+    command = "yarn build"
+
+[[redirects]]
+    from = "/discord"
+    to = "https://discord.gg/UB3jBBC"
+
+[[redirects]]
+    from = "/mod/*"
+    to = "/modclublanding.html"
+    status = 200
