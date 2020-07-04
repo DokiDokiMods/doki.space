@@ -48,12 +48,8 @@
 
                 <pre>{{linux_install_commands}}</pre>
 
-                <a class="button primary" :href="downloads.linux.url_64" :key="'64bit'">
-                    <i class="fas fa-download fa-fw"></i> Download (64-bit)
-                </a>
-
-                <a class="button secondary" :href="downloads.linux.url_32" :key="'32bit'">
-                    <i class="fas fa-download fa-fw"></i> Download (32-bit)
+                <a class="button primary" :href="downloads.linux.url" :key="'64bit'">
+                    <i class="fas fa-download fa-fw"></i> Download
                 </a>
             </div>
         </div>
@@ -70,14 +66,13 @@
                 error: false,
                 downloads: {
                     linux: {
-                        url_64: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-linux-x86_64.AppImage",
-                        url_32: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-linux-i386.AppImage"
+                        url: ""
                     },
                     mac: {
-                        url: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-mac.dmg"
+                        url: ""
                     },
                     windows: {
-                        url: "https://github.com/DokiDokiModManager/Mod-Manager/releases/download/untagged-a03ab3c5889bc894365e/ddmm-4.0.0-win.exe"
+                        url: ""
                     }
                 },
                 tabs: [
@@ -101,9 +96,9 @@
         },
         computed: {
             linux_install_commands() {
-                const fn = this.downloads.linux.url_64.split("/").pop();
+                const fn = this.downloads.linux.url.split("/").pop();
 
-                return `$ wget ${this.downloads.linux.url_64}\n` +
+                return `$ wget ${this.downloads.linux.url}\n` +
                     `$ chmod +x ${fn}\n` +
                     `$ ./${fn}`;
             }
@@ -111,8 +106,7 @@
         mounted() {
             fetch("https://api.github.com/repos/DokiDokiModManager/Mod-Manager/releases/latest").then(res => res.json()).then(data => {
                 const files = data.assets;
-                this.downloads.linux.url_64 = files.find(file => file.name.match(/linux-x86_64\.AppImage$/)).browser_download_url;
-                this.downloads.linux.url_32 = files.find(file => file.name.match(/linux-i386\.AppImage$/)).browser_download_url;
+                this.downloads.linux.url = files.find(file => file.name.match(/\.AppImage$/)).browser_download_url;
                 this.downloads.windows.url = files.find(file => file.name.match(/win\.exe$/)).browser_download_url;
                 this.downloads.mac.url = files.find(file => file.name.match(/mac\.dmg$/)).browser_download_url;
             }).catch(() => {

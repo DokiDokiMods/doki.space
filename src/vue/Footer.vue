@@ -27,6 +27,10 @@
                    target="_blank"
                    class="social-link"
                    title="Translation project on Weblate"><i class="fas fa-language"></i></a>
+                <a href="https://help.doki.space"
+                   target="_blank"
+                   class="social-link"
+                   title="User Guide"><i class="fas fa-book"></i></a>
             </div>
 
             <div style="text-align: center">

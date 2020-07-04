@@ -43,7 +43,6 @@
     import s3 from "../img/screenshots/s3.png";
     import s4 from "../img/screenshots/s4.png";
 
-    import s5 from "../img/screenshots/s5.png";
     import platform from "platform-detect";
 
     import PageHeader from "./PageHeader";
@@ -58,7 +57,7 @@
         components: {PatreonBanner, Description, Footer, Screenshots, PageHeader, Downloads},
         data() {
             return {
-                screenshots: [s1, s2, s3, s4, s5],
+                screenshots: [s1, s2, s3, s4],
                 os: platform.linux ? "linux" : (platform.macos ? "mac" : "windows")
             }
         }
