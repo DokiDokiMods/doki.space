@@ -32,4 +32,10 @@
     div.short {
         padding: 1em;
     }
+
+    @media screen and (max-width: 768px) {
+        div {
+            padding: 0.5em;
+        }
+    }
 </style>

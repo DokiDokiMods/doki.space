@@ -17,6 +17,10 @@ h1, h2, h3, h4 {
 }
 
 .container {
+  width: 100vw;
+}
+
+.container {
   padding: 1em;
 }
 
@@ -109,4 +113,32 @@ pre {
 
 .lead {
   font-size: 1.25em;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-on-small {
+    display: none;
+  }
+
+  .container {
+    padding: 0.5em;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
 }

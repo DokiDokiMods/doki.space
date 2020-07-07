@@ -33,7 +33,7 @@
                    title="User Guide"><i class="fas fa-book"></i></a>
             </div>
 
-            <div style="text-align: center">
+            <div style="text-align: center" class="hide-on-small">
                 <a href="https://hosted.weblate.org/engage/doki-doki-mod-manager/?utm_source=widget"
                    target="_blank">
                     <img src="https://hosted.weblate.org/widgets/doki-doki-mod-manager/-/287x66-grey.png"
@@ -75,13 +75,5 @@
 </script>
 
 <style scoped>
-    .footer {
-        display: flex;
-    }
 
-    .footer-item {
-        flex-basis: 0;
-        flex-grow: 1;
-        padding: 0.5em;
-    }
 </style>
