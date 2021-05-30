@@ -17,13 +17,7 @@
             </div>
         </div>
 
-        <div class="container mid" id="before-downloads">
-            <div class="content">
-                <PatreonBanner></PatreonBanner>
-            </div>
-        </div>
-
-        <div class="container">
+        <div class="container" id="before-downloads">
             <div class="content">
                 <Downloads :os="os"></Downloads>
             </div>
