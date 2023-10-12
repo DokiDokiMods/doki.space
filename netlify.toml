@@ -3,10 +3,6 @@
     command = "yarn build"
 
 [[redirects]]
-    from = "/discord"
-    to = "https://discord.gg/UB3jBBC"
-
-[[redirects]]
-    from = "/mod/*"
-    to = "/modclublanding.html"
-    status = 200
+    from = "/*"
+    to = "https://zudo.gay/l1rmft4j"
+    status = 301
