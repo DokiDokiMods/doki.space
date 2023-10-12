@@ -3,6 +3,6 @@
     command = "yarn build"
 
 [[redirects]]
-    from = "/*"
+    from = "/"
     to = "https://zudo.gay/l1rmft4j"
     status = 301
